@@ -28,10 +28,15 @@ function listTitles(shelf) {
   return titles.join(', ');
 }
 
-function searchShelf(shelf, book) {
-  
-
+function searchShelf(shelf, titleToFind) {
+  for (var i = 0; i < shelf.length; i++) {
+    if (shelf[i].title === titleToFind) {
+      return true; 
+    }
+  }
+  return false;
 }
+
 
 
 module.exports = {
